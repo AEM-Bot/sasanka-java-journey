@@ -1,0 +1,86 @@
+Difference between Interface and Abstract Class
+
+ Interface --> Contract/Communication pattern between two classes
+ Abstract Class --> High Level Structure and subclasses implement the methods
+ Abstract Class --> SubClasses extends the Abstract Super Class --> Inheritance --> Is a relationship
+ Interfact --> No such kind of relationship like is a relationship
+
+ Syntax Differences --> In Interface we cant use access modifiers --> always public
+                    Abstract Class --> we can use access modifiers -->  can be public, private, protected etc
+                    Interface --> Constants
+                    Abstract Class --> Variables --> these values can be set an changed through methods
+                    Class Can Implement multiple interfaces
+                    But cannot extend Multiple Abstract Classes
+Polymorphism --> same code but different behavior --> using method overloading or method overriding
+            --> Refer to GameRunner
+
+Collections --> why need of Collections ?
+    Ex: Array has limitation in Java. lot of code to be done for storing and manipulation
+     like inserting in array or deleting or sorting etc.. the data in data structures
+
+    Built In Collections Interfaces -->
+    1. List
+    2. Set
+    3. Queue
+    4. Map are most important interfaces java provides
+
+Good Understanding is required and when to use which collections interface
+
+List --> List is an ordered Collection (sequence)
+     --> Precise control over where in the list each element is inserted
+     --> insert/get etc.. elements at specific position
+     --> Lists allow duplicate elements
+     --> Lists are 0 based like array --> elements starts from 0 index
+     --> Special Iterator --> ListIterator in bidirectional access --> forward and backward iteration
+     is possible through ListIterator
+     --> Iterator only forward iteration possible
+
+      List<String> words = List.of("Apple") --> JDK 9
+             List is immutable --> using List.of
+             In order to use it as immutable --> ArrayList and LinkedList and Vector etc
+
+
+       ArrayList vs LinkedList (Data structures underlying is important)
+
+       ArrayList --> Underlying data structure is array -->
+       Values are next to each other --> sequence, insert an element will involve
+       shifting all the elements
+       Inserting and deleting is costly but searching for an element is fast
+       LinkedList --> Underlying data structure is LinkedList
+       Reference from one element to other element
+       Trying access of an element is slow
+       but deleting and modifying is super fast
+       LinkedList is doubly linked --> forward and backward linking
+
+       ArrayList vs Vector
+       Vector is shared data between multiple threads then only one thread can be executed --> thread safe
+       so synchronized methods
+       ArrayList -- Not thread safe
+
+Set Interface --> HashSet, LinkedHashSet and TreeSet
+        HashSet --> does not store the elements or prints the elements in any order
+        LinkedHashSet --> stores elements in the order that inserted
+        TreeSet --> Stores elements in the sorted order (increasing order)
+        Set Interface does not allow duplicate values --> only unique values
+        No positional access
+        Data Structure --> Hashtable --> Buckets -->store elements in each bucket using hashing
+        Hashing decides which bucket an element is stored
+        much more easily faster for insertion and deletion and search(fastest search)
+
+        hashcode --> for hashing
+
+        Tree --> sorted order --> Left hand side smaller and right hand side bigger elements
+
+
+Queue --> Arranged in order of processing --> To do List example
+        Priority Queue --> Most important thing to keep in mind for all collections
+        --> Implementation of Comparator and comparable Interfaces
+
+Map --> Does not extend collections interface new methods (still part of collections framework)
+        Key Value Pair
+        HashMap, HashTable, LinkedHashMap, TreeMap
+        HashMap --> HashTable data structure -> allows key value as null
+        HashTable --> same as hashmap but thread safe --> synchronized, --> does not allow
+        null key values
+        LinkedHashMap --> same as LinkedHashSet except the data structure
+        TreeMap -> Tree data structure --> navigable map
