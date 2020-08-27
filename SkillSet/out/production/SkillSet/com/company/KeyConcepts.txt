@@ -84,3 +84,12 @@ Map --> Does not extend collections interface new methods (still part of collect
         null key values
         LinkedHashMap --> same as LinkedHashSet except the data structure
         TreeMap -> Tree data structure --> navigable map
+
+End of Collections --> List, Set , Queue, Map
+        Underlying Data Structures
+        Hash --> Unordered and Unsorted always
+        Tree --> Always Sorted way in tree
+        Linked --> Linked to each other (doubly linked as well) order is maintained in insetion order
+
+Generics --> Need of Generics in java-->
+        
