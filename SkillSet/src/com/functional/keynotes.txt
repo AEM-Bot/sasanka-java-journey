@@ -1,0 +1,8 @@
+Lambda Expressions
+        Used for Functional Programming(->)
+        shortcut for creating function
+        stream is source of object(similarly like Generics)
+        Stream Operations --> Intermediate Operation (Filtering as example) --> Output is again stream
+                            Terminal Operation Process/consume the element (For example
+                            reduce, and forEach )
+
