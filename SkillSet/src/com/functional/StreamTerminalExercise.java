@@ -1,6 +1,8 @@
 package com.functional;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -27,8 +29,16 @@ public class StreamTerminalExercise {
         //Functional Interfaces are responsible for doing most of the logic (operations)
 
         //For Each prints only each element - to have list returned use .collect function
+        //Collect to List
         System.out.println(numbers.stream()
                 .filter(e -> e % 2 != 0)
                 .collect(Collectors.toList()));
+
+        System.out.println(numbers.stream()
+                .filter(e -> e % 2 == 0)
+                .collect(Collectors.toList()));
+
+        //When using Map --> IntPipeline for IntStream
+        System.out.println(IntStream.range(1,11).map(e->e*e).boxed().collect(Collectors.toList()));
     }
 }
