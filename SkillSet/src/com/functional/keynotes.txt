@@ -6,3 +6,6 @@ Lambda Expressions
                             Terminal Operation Process/consume the element (For example
                             reduce, and forEach )
 
+Functional Interface -->
+Foreach -- Consumer Interface
+Filter --> Predicate Interface
