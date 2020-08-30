@@ -30,12 +30,14 @@ public class LambdaBehindScenesRunner {
         integers.add(43);
         integers.add(48);
 
+        //Using lambdas
         integers.stream()
                 .filter(n -> n % 2 == 0)
                 .forEach(e -> System.out.println(e));
 
         System.out.println("=====Using Consumer for Each=====");
 
+        //Using how lambdas are working
         integers.stream()
                 .filter(new EvenNumberPredicate())
                 .forEach(new EvenNumberUsinConsumer());
