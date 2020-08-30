@@ -11,8 +11,8 @@ class EvenNumberPredicate implements Predicate<Integer> {
         return number % 2 == 0;
     }
 }
-class EvenNumberUsinConsumer implements Consumer<Integer>{
 
+class EvenNumberUsinConsumer implements Consumer<Integer> {
     @Override
     public void accept(Integer integer) {
         System.out.println(integer);
