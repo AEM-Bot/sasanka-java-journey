@@ -41,8 +41,10 @@ public class LambdaBehindScenesRunner {
         integers.add(48);
 
         //Using lambdas
+        //storing functions in variables
+        Predicate<Integer> evenPredicate = createEvenPredicate();
         integers.stream()
-                .filter(n -> n % 2 == 0)
+                .filter(evenPredicate)
                 .forEach(e -> System.out.println(e));
 
         System.out.println("=====Using Consumer for Each=====");
@@ -55,7 +57,7 @@ public class LambdaBehindScenesRunner {
 
         //Using lambdas map
         integers.stream()
-                .filter(n -> n % 2 == 0)
+                .filter(createEvenPredicate())
                 .map(n -> n * n)
                 .forEach(n -> System.out.println(n));
 
@@ -66,5 +68,9 @@ public class LambdaBehindScenesRunner {
                 .map(new EvenNumbersSquareFunction())
                 .forEach(e -> System.out.println(e));
 
+    }
+
+    private static Predicate<Integer> createEvenPredicate() {
+        return n -> n % 2 == 0;
     }
 }
